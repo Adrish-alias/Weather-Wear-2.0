@@ -24,6 +24,7 @@ function getlocation() {
                 let weather = data.weather[0].main;
                 // Change background dynamically based on temperature
                 changeBackgroundByCondition(weather);
+                let condition = weather;
                 if (condition == "Rain" || condition == "Clouds") {
                 document.getElementById("header").style.color = "white";
                 if(condition=="Rain"||condition=="Snow")
@@ -193,3 +194,4 @@ function changeBackgroundByCondition(condition) {
     });
 
 }
+
