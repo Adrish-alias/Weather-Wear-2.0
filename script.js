@@ -24,6 +24,16 @@ function getlocation() {
                 let weather = data.weather[0].main;
                 // Change background dynamically based on temperature
                 changeBackgroundByCondition(weather);
+                if (condition == "Rain" || condition == "Clouds") {
+                document.getElementById("header").style.color = "white";
+                if(condition=="Rain"||condition=="Snow")
+                 document.getElementById("content").style.textShadow = " none";
+            }
+            else if (condition == Clear) {
+                document.getElementById("header").style.color = "black";
+                
+
+            }
 
 
                 document.querySelector(".recc").innerHTML =
@@ -181,4 +191,5 @@ function changeBackgroundByCondition(condition) {
 
         speed: 1
     });
+
 }
