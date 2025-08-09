@@ -163,7 +163,9 @@ function getColorScheme(condition) {
 function changeBackgroundByCondition(condition) {
     const colors = getColorScheme(condition);
 
-    if (vantaEffect) vantaEffect.destroy(); // Remove previous effect
+    if (vantaEffect) {
+  vantaEffect.setOptions({...new options...});
+} 
 
     vantaEffect = VANTA.CLOUDS({
         el: "body",
@@ -181,4 +183,5 @@ function changeBackgroundByCondition(condition) {
 
         speed: 1
     });
+
 }
